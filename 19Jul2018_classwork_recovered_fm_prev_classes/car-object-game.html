@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+
+
+      // How would we log...
+function reWriteStats(){
+  
+console.log(car.make)
+console.log(car.model)
+console.log(car.mileage)
+console.log(car.isWorking)
+}
+document.onkeyup = function(bob) {
+        keyPressed = bob.key.toLowerCase();
+       
+//         if(keyPressed ==='w'){
+//         car.driveToWork();
+//         reWriteStats();
+// }
+//        if(keyPressed ==='d'){
+//        car.driveAroundWorld();
+//        reWriteStats();
+// }
+//        if(keyPressed ==='g'){
+//        car.getTuneUp();
+//        reWriteStats();
+// }
+//        if(keyPressed ==='h'){
+//        car.honk();
+//        reWriteStats();
+//       };
+// }
+
+//SWITCH STATEMENTS
+switch(event.key.toLowerCase()){
+  case 'h':
+  car.honk()
+  break
+  case 'w':
+  car.driveToWOrk()
+  break
+  case 'd':
+  car.driveAroundWorld();
+  break
+  case 'g':
+  car.getTuneUp();
+  break
+  reWriteStats();
+}
+
+}
+
+    </script>
+    <ul>Use the following letters to access:</ul>
+    <li>
+      'w' to drive To Work
+    </li>
+    <li>
+     'd' to drive around the world!
+   </li>
+   <li>
+     'g' to getTuneUp
+   </li>
+   <li>
+     'h' to honk
+   </li>
+  </body>
+</html>
